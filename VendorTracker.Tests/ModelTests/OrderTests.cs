@@ -12,11 +12,19 @@ namespace VendorTracker.Tests
     {
       Order.ClearAll();
     }
-      [TestMethod]
-      public void OrderConstructor_CreatesInstanceOfOrder_Order()
-      {
-        Order newOrder = new Order("test purchase");
-        Assert.AreEqual(typeof(Order), newOrder.GetType());
-      }
+    [TestMethod]
+    public void OrderConstructor_CreatesInstanceOfOrder_Order()
+    {
+      Order newOrder = new Order("test purchase");
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
+    [TestMethod]
+    public void GetOrderDetails_ReturnsOrderDetails_String()
+    {
+      string orderDetails = "Walk the dog.";
+      Order newOrder = new Order(orderDetails);
+      string result = newOrder.OrderDetails;
+      Assert.AreEqual(orderDetails, result);
+    }
   }
 }
