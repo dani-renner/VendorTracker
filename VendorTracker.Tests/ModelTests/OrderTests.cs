@@ -60,6 +60,16 @@ namespace VendorTracker.Tests
       Order newOrder = new Order(orderDetails);
       int result = newOrder.Id;
       Assert.AreEqual(1, result);
-    }    
+    }
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      string orderDetails01 = "2 loaves of bread";
+      string orderDetails02 = "3 pastries";
+      Order newOrder1 = new Order(orderDetails01);
+      Order newOrder2 = new Order(orderDetails02);
+      Order result = Order.Find(2);
+      Assert.AreEqual(newOrder2, result);
+    } 
   }
 }
