@@ -21,7 +21,7 @@ _This application allows business owners to keep track of their vendors and what
 * Navigate to the VendorTracker directory
 * Enter "dotnet run" (without the quotes) in the terminal to start
 * Ctrl + click the link that populates in the terminal to view the application in the webpage. It is probably http://localhost:5000/
-* Use Ctrl + C to quit the host and close out of the window in the browser.
+* Use Ctrl + C in the terminal to quit the host and close out of the window in the browser.
 
 ## License
 
