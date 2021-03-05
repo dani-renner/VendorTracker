@@ -18,7 +18,7 @@ namespace VendorTracker.TestTools
       Vendor newVendor = new Vendor("test vendor");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
-        [TestMethod]
+    [TestMethod]
     public void GetName_ReturnsName_String()
     {
       string name = "Test Vendor";
@@ -33,6 +33,17 @@ namespace VendorTracker.TestTools
       Vendor newVendor = new Vendor(name);
       int result = newVendor.Id;
       Assert.AreEqual(1, result);
+    }
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorObjects_VendorList()
+    {
+      string name01 = "Suzie's Baked Goods";
+      string name02 = "Mr. Smith";
+      Vendor newVendor1 = new Vendor(name01);
+      Vendor newVendor2 = new Vendor(name02);
+      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
+      List<Vendor> result = Vendor.GetAll();
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
